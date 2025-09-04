@@ -8,7 +8,7 @@ API_KEY = os.getenv("OPENWEATHER_API_KEY", "demo_key")
 
 @app.route("/")
 def home():
-    return "Weather App CI/CD is live!"
+    return "Weather App CI/CD is live test!"
 
 @app.route("/weather")
 def get_weather():
