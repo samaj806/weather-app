@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing dependencies..."
+      - pip install -r requirements.txt -t .
+  build:
+    commands:
+      - echo "Build phase - nothing major for Flask"
+  post_build:
+    commands:
+      - echo "Packaging application..."
+      - zip -r weather-app.zip * .[^.]* || true
+artifacts:
+  files:
+    - weather-app.zip
