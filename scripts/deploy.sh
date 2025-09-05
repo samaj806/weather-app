@@ -5,4 +5,4 @@ cd /home/ec2-user/weather-app
 pkill -f "python3 app.py" || true
 
 # Start new Flask app in background
-nohup python3 app.py --host=0.0.0.0 --port=5000 &
+nohup python3 app.py --host=0.0.0.0 --port=5000 app.log 2>&1 &
